@@ -6,7 +6,7 @@
 
 template <int N, typename TFunction>
 void repeat_n(TFunction f) {
-    ranges::for_each(ranges::view::iota(1, N), [f](int i) {
+    ranges::for_each(ranges::view::iota(0, N), [f](int i) {
         f(i);
     });
 }
